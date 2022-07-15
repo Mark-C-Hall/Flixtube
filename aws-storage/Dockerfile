@@ -8,6 +8,4 @@ RUN npm install --omit=dev
 
 COPY ./src ./src
 
-COPY ./videos ./videos
-
 CMD ["npm", "start"]
