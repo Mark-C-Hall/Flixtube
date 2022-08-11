@@ -17,6 +17,8 @@
     "wait-port": "^0.2.6"
   },
   "devDependencies": {
+    "eslint": "^8.21.0",
+    "eslint-config-google": "^0.14.0",
     "nodemon": "^1.19.1"
   }
 }
