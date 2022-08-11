@@ -1,5 +1,5 @@
 resource "aws_resourcegroups_group" "flixtube" {
-  name = "Flixtube"
+  name = var.app_name
 
   resource_query {
     query = <<JSON
