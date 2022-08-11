@@ -6,12 +6,15 @@ services:
     ports:
       - "4000:27017"
     restart: always
-  aws-storage:
-    image: aws-storage
+  video-storage:
+    image: video-storage
     build:
-      context: ./aws-storage
-      dockerfile: Dockerfile
+      context: ./video-storage
+      dockerfile: Dockerfile-dev
     container_name: video-storage
+    volumes:
+      - /tmp/history/npm-cache:/root/.npm:z
+      - ./video-storage/src:/usr/src/app/src:z
     ports:
       - "4001:80"
     environment:
