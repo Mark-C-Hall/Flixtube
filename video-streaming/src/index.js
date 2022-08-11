@@ -26,7 +26,7 @@ if (!process.env.RABBIT) {
 }
 
 // Declare ENV variables.
-const PORT = process.env.PORT;
+const PORT = process.env.PORT && parseInt(process.env.PORT) || 3000;
 const videoStorageHost = process.env.VIDEO_STORAGE_HOST;
 const videoStoragePort = parseInt(process.env.VIDEO_STORAGE_PORT);
 const DBHOST = process.env.DBHOST;
@@ -122,8 +122,7 @@ function startHttpServer(db, messageChannel) {
     app.use(morgan('dev'));
     setupHandlers(app, db, messageChannel);
 
-    const port = process.env.PORT && parseInt(process.env.PORT) || 3000;
-    app.listen(port, () => {
+    app.listen(PORT, () => {
       // HTTP is listening, resolve.
       resolve();
     });
