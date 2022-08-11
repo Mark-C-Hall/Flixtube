@@ -18,6 +18,8 @@
   },
   "devDependencies": {
     "amqplib": "^0.10.2",
+    "eslint": "^8.21.0",
+    "eslint-config-google": "^0.14.0",
     "nodemon": "^2.0.19"
   }
 }
