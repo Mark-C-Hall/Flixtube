@@ -1,17 +1,7 @@
 const mongodb = require('mongodb');
 
-if (!process.env.DBHOST) {
-  throw new Error("Please specify database host using DBHOST.");
-}
-if (!process.env.DBNAME) {
-  throw new Error("Please specify database name using DBNAME.");
-}
-
-const DBHOST = process.env.DBHOST;
-const DBNAME = process.env.DBNAME;
-
-console.log(DBNAME);
-console.log(DBHOST);
+const DBHOST = "mongodb://localhost:4000";
+const DBNAME = "video-streaming";
 
 // Connects to MongoDB using ENV names.
 function connectDb() {
