@@ -1,3 +1,11 @@
 variable "app_name" {
-  default = "flixtube"
+  description = "Main Title"
+  type        = string
+  default     = "flixtube"
+}
+
+variable "region" {
+  description = "AWS Region"
+  type        = string
+  default     = "us-east-1"
 }
